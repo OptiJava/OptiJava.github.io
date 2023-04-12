@@ -195,7 +195,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-01-04 20:25:39" itemprop="dateModified" datetime="2023-01-04T20:25:39+08:00">2023-01-04</time>
+                <time title="修改时间：2023-04-12 19:11:31" itemprop="dateModified" datetime="2023-04-12T19:11:31+08:00">2023-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -218,9 +218,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="OptCarpetAddition-Mod-介绍"><a href="#OptCarpetAddition-Mod-介绍" class="headerlink" title="OptCarpetAddition Mod 介绍"></a>OptCarpetAddition Mod 介绍</h1><p><em>Language: <a target="_blank" rel="noopener" href="https://github.com/OptiJava/OptCarpetAddition/blob/master/README-en.md">English</a> | 中文</em></p>
+          <h1 id="Opt-Carpet-Addition-Mod"><a href="#Opt-Carpet-Addition-Mod" class="headerlink" title="Opt Carpet Addition Mod"></a>Opt Carpet Addition Mod</h1><p>Language: <a target="_blank" rel="noopener" href="https://github.com/OptiJava/OptCarpetAddition/blob/master/README-en.md">English</a> | 中文</p>
 <p>这是一个CarpetMod的扩展模组，目标是添加一些没有太大改变原版游戏机制但优化玩家体验/<del>降低腐竹血压</del>的一些功能。</p>
 <p><strong>本模组需要前置：<code>Carpet</code> <code>fabric-api</code></strong></p>
+<p><strong>使用前一定仔细阅读README.md！！！！</strong></p>
 <h2 id="Rules"><a href="#Rules" class="headerlink" title="Rules"></a>Rules</h2><h3 id="commandTpToFakePlayer"><a href="#commandTpToFakePlayer" class="headerlink" title="commandTpToFakePlayer"></a>commandTpToFakePlayer</h3><p>是否允许玩家通过/player xxx tp 指令传送到假人</p>
 <ul>
 <li><p>有些服务器需要玩家之间互相tp的功能，如果使用tpa模组，就没法tp到假人（因为假人不会同意tpa），所以加入了这个功能</p>
@@ -262,32 +263,32 @@
 <li>Categories: <code>FixBug</code></li>
 </ul>
 <h3 id="forceFakePlayerGameMode"><a href="#forceFakePlayerGameMode" class="headerlink" title="forceFakePlayerGameMode"></a>forceFakePlayerGameMode</h3><p>强制设定所有假人的游戏模式</p>
-<p><em>只能强行设为生存(survival)、创造(creative)、冒险(adventure)，无法设为旁观者模式，因为在测试过程中强行设为旁观者模式会出现bug，目前不清楚具体原因</em></p>
+<p>只能强行设为生存(survival)、创造(creative)、冒险(adventure)，无法设为旁观者模式，因为在测试过程中强行设为旁观者模式会出现bug，目前不清楚具体原因</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>survival</code> <code>creative</code> <code>adventure</code></li>
 <li>Categories: <code>Feature</code></li>
 </ul>
 <h3 id="enableTpPrefixBlacklist"><a href="#enableTpPrefixBlacklist" class="headerlink" title="enableTpPrefixBlacklist"></a>enableTpPrefixBlacklist</h3><p><em><strong>感谢 @<a target="_blank" rel="noopener" href="https://github.com/Water-Buckets"><em>Water_Bucket</em></a> 提供的灵感</strong></em></p>
-<p>开启假人Tp前缀黑名单功能<br><br>开启这个功能后，如果你要tp到的假人名字前缀在黑名单中，会阻止你tp到他<br><br><em>比如你要tp到的假人叫做anti_mob，而黑名单中有一个anti，那你就不能tp到这个假人</em><br><br>假人的黑名单可以使用/tpmanager指令编辑（这个指令具体的用法看后面）</p>
+<p>开启假人Tp前缀黑名单功能<br><br>开启这个功能后，如果你要tp到的假人名字前缀在黑名单中，会阻止你tp到他并显示：You can’t tp to this player because of tp<br>limit.<br><br><em>比如你要tp到的假人叫做anti_mob，而黑名单中有一个anti，那你就不能tp到这个假人</em><br><br>假人的黑名单可以使用/tpmanager指令编辑（这个指令具体的用法看后面）</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Feature</code></li>
 </ul>
-<h3 id="enableTpPrefixWhitelist"><a href="#enableTpPrefixWhitelist" class="headerlink" title="enableTpPrefixWhitelist"></a>enableTpPrefixWhitelist</h3><p>开启假人Tp前缀白名单功能<br><br>开启这个功能后，如果你要tp到的假人名字前缀不在白名单中，会阻止你tp到他并显示：You can not tp to this player because of tp limit.<br><br><em>比如你要tp到的假人叫做anti_mob，而白名单中没有anti，那你就不能tp到这个假人</em><br><br>假人的白名单可以使用/tpmanager指令编辑（这个指令具体的用法看后面）</p>
+<h3 id="enableTpPrefixWhitelist"><a href="#enableTpPrefixWhitelist" class="headerlink" title="enableTpPrefixWhitelist"></a>enableTpPrefixWhitelist</h3><p>开启假人Tp前缀白名单功能<br><br>开启这个功能后，如果你要tp到的假人名字前缀不在白名单中，会阻止你tp到他并显示：You can’t tp to this player because of tp<br>limit.<br><br><em>比如你要tp到的假人叫做anti_mob，而白名单中没有anti，那你就不能tp到这个假人</em><br><br>假人的白名单可以使用/tpmanager指令编辑（这个指令具体的用法看后面）</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Feature</code></li>
 </ul>
-<h3 id="enableTpHerePrefixBlacklist"><a href="#enableTpHerePrefixBlacklist" class="headerlink" title="enableTpHerePrefixBlacklist"></a>enableTpHerePrefixBlacklist</h3><p>开启假人Tphere前缀黑名单功能<br><br>开启这个功能后，如果你要tphere的假人名字的前缀在黑名单中，会阻止你tphere并显示：You can not tp to this player because of tp limit.<br><br><em>比如你要tphere的假人叫做anti_mob，而黑名单中有一个anti，那你就不能tphere这个假人</em><br><br>假人的黑名单可以使用/tpmanager指令编辑（这个指令具体的用法看后面）</p>
+<h3 id="enableTpHerePrefixBlacklist"><a href="#enableTpHerePrefixBlacklist" class="headerlink" title="enableTpHerePrefixBlacklist"></a>enableTpHerePrefixBlacklist</h3><p>开启假人Tphere前缀黑名单功能<br><br>开启这个功能后，如果你要tphere的假人名字的前缀在黑名单中，会阻止你tphere并显示：You can’t tp to this player because of tp<br>limit.<br><br><em>比如你要tphere的假人叫做anti_mob，而黑名单中有一个anti，那你就不能tphere这个假人</em><br><br>假人的黑名单可以使用/tpmanager指令编辑（这个指令具体的用法看后面）</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Feature</code></li>
 </ul>
-<h3 id="enableTpHerePrefixWhitelist"><a href="#enableTpHerePrefixWhitelist" class="headerlink" title="enableTpHerePrefixWhitelist"></a>enableTpHerePrefixWhitelist</h3><p>开启假人Tphere前缀白名单功能<br><br>开启这个功能后，如果你要tphere的假人名字前缀不在白名单中，会阻止你tphere他<br><br><em>比如你要tphere的假人叫做anti_mob，而白名单中有一个anti，那你就能tp到这个假人</em><br><br>假人白名单可以使用/tpmanager指令编辑（这个指令具体的用法看后面）</p>
+<h3 id="enableTpHerePrefixWhitelist"><a href="#enableTpHerePrefixWhitelist" class="headerlink" title="enableTpHerePrefixWhitelist"></a>enableTpHerePrefixWhitelist</h3><p>开启假人Tphere前缀白名单功能<br><br>开启这个功能后，如果你要tphere的假人名字前缀不在白名单中，会阻止你tphere并显示：You can’t tp to this player because of tp<br>limit.<br><br><em>比如你要tphere的假人叫做anti_mob，而白名单中有一个anti，那你就能tp到这个假人</em><br><br>假人白名单可以使用/tpmanager指令编辑（这个指令具体的用法看后面）</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
@@ -311,29 +312,29 @@
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Feature</code></li>
 </ul>
-<h3 id="disabledNetherPortalSpawn"><a href="#disabledNetherPortalSpawn" class="headerlink" title="disabledNetherPortalSpawn"></a>disabledNetherPortalSpawn</h3><p>禁止猪人生成在地狱门方块上<del>主世界猪人塔 寄</del></p>
+<h3 id="disabledNetherPortalSpawn"><a href="#disabledNetherPortalSpawn" class="headerlink" title="disabledNetherPortalSpawn"></a>disabledNetherPortalSpawn</h3><p>禁止猪人生成在地狱门方块上</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Feature</code></li>
 </ul>
-<h3 id="disabledEntityTick"><a href="#disabledEntityTick" class="headerlink" title="disabledEntityTick"></a>disabledEntityTick</h3><p><strong><em>注意！此规则可能会导致世界上所有的下落的方块实体无限回弹！</em></strong></p>
-<p>此规则会跳过世界上一切实体的运算，不过理论上来说玩家是正常的，开启此规则后，所有的生物全都会卡住，就算他们在空中也不会掉下来</p>
+<h3 id="disabledEntityTick"><a href="#disabledEntityTick" class="headerlink" title="disabledEntityTick"></a>disabledEntityTick</h3><p><strong><em>注意！此规则可能会导致世界上所有的下落的方块实体无限回弹！！</em></strong></p>
+<p>此规则会跳过世界上一切实体的运算，不过玩家是正常的，开启此规则后，所有的生物全都会卡住，就算他们在空中也不会掉下来</p>
 <p>此规则的目的是在服务器因为实体问题严重卡顿时，可以暂时缓解问题，但这不是最好的方案</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Experimental</code></li>
 </ul>
-<h3 id="disabledUpdateSuppressionErrorStackTrace-仅v1-3-alpha-1以上版本"><a href="#disabledUpdateSuppressionErrorStackTrace-仅v1-3-alpha-1以上版本" class="headerlink" title="disabledUpdateSuppressionErrorStackTrace  仅v1.3-alpha.1以上版本"></a>disabledUpdateSuppressionErrorStackTrace  <code>仅v1.3-alpha.1以上版本</code></h3><p><strong><em>此功能仅限1.17版本</em></strong></p>
+<h3 id="disabledUpdateSuppressionErrorStackTrace"><a href="#disabledUpdateSuppressionErrorStackTrace" class="headerlink" title="disabledUpdateSuppressionErrorStackTrace"></a>disabledUpdateSuppressionErrorStackTrace</h3><p><strong><em>此功能仅限1.17和1.18版本</em></strong></p>
 <p><strong><em>此功能必须搭配carpet规则updateSuppressionCrashFix使用，否则无效</em></strong></p>
-<p>此规则可以让所有非致命的因为更新抑制导致的异常不刷屏，只输出一条日志：Update Suppression.<br><br>必须搭配carpet规则updateSuppressionCrashFix规则使用，否则无效<br><br>1.16版本无此规则，因为1.16的carpet没有updateSuppressionCrashFix规则<br><br>致命异常会正常输出并打印异常栈（致命异常指在不开启updateSuppressionCrashFix情况下会导致服务器崩溃的异常）</p>
+<p>此规则可以让所有非致命的因为更新抑制导致的异常不刷屏，只输出一条日志：Update Suppression.<br><br>必须搭配carpet规则updateSuppressionCrashFix规则使用，否则无效<br><br>1.16和1.19版本无此规则，因为1.16和1.19的carpet没有updateSuppressionCrashFix规则<br><br>致命异常会正常输出并打印异常栈（致命异常指在不开启updateSuppressionCrashFix情况下会导致服务器崩溃的异常）</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>BugFix</code></li>
 </ul>
-<h3 id="unescapeChatMessage-仅v1-3-alpha-1以上版本"><a href="#unescapeChatMessage-仅v1-3-alpha-1以上版本" class="headerlink" title="unescapeChatMessage  仅v1.3-alpha.1以上版本"></a>unescapeChatMessage  <code>仅v1.3-alpha.1以上版本</code></h3><p><strong>此规则仅客户端有效，服务端无效</strong></p>
+<h3 id="unescapeChatMessage-仅v1-3-alpha-1及以上版本"><a href="#unescapeChatMessage-仅v1-3-alpha-1及以上版本" class="headerlink" title="unescapeChatMessage  仅v1.3-alpha.1及以上版本"></a>unescapeChatMessage  <code>仅v1.3-alpha.1及以上版本</code></h3><p><strong>此规则仅客户端有效，服务端无效</strong></p>
 <p>此规则会把客户端发出的所有应当转义的文字转义</p>
 <p>例如在聊天栏输入：<code>你好，\u4e2d\u6587</code><br><br>实际发送的消息是：<code>你好，中文</code></p>
 <ul>
@@ -341,19 +342,35 @@
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Feature</code> <code>CLIENT</code></li>
 </ul>
-<h3 id="optimizePlayerConnect-仅1-3-alpha-2及以上版本"><a href="#optimizePlayerConnect-仅1-3-alpha-2及以上版本" class="headerlink" title="optimizePlayerConnect   仅1.3-alpha.2及以上版本"></a>optimizePlayerConnect   <code>仅1.3-alpha.2及以上版本</code></h3><p><strong><em>仅1.17及1.18有此功能</em></strong></p>
+<h3 id="optimizePlayerConnect"><a href="#optimizePlayerConnect" class="headerlink" title="optimizePlayerConnect"></a>optimizePlayerConnect</h3><p><strong><em>仅1.17及1.18有此功能</em></strong></p>
 <p>优化玩家进服逻辑</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Optimization</code> <code>Experimential</code></li>
 </ul>
-<h3 id="optimizeTeleport-仅1-3-alpha-2及以上版本"><a href="#optimizeTeleport-仅1-3-alpha-2及以上版本" class="headerlink" title="optimizeTeleport      仅1.3-alpha.2及以上版本"></a>optimizeTeleport      <code>仅1.3-alpha.2及以上版本</code></h3><p><strong><em>仅1.17及1.18有此功能</em></strong></p>
+<h3 id="optimizeTeleport"><a href="#optimizeTeleport" class="headerlink" title="optimizeTeleport"></a>optimizeTeleport</h3><p><strong><em>仅1.17及1.18有此功能</em></strong></p>
 <p>优化玩家传送逻辑</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Optimization</code> <code>Experimential</code></li>
+</ul>
+<h3 id="commandLogger"><a href="#commandLogger" class="headerlink" title="commandLogger"></a>commandLogger</h3><p><strong>1.16无此功能，因为1.16分支已经停止维护</strong></p>
+<p>这个规则可以记录每一个玩家执行的每一个指令</p>
+<p>CommandLogger.json配置文件可以配置白名单、黑名单等，修改配置文件后应执行/commandlogger reload指令热重载</p>
+<ul>
+<li>Default value: <code>false</code></li>
+<li>Acceptable value: <code>true</code> <code>false</code></li>
+<li>Categories: <code>Command</code> <code>Feature</code></li>
+</ul>
+<h3 id="dropperCrashFix"><a href="#dropperCrashFix" class="headerlink" title="dropperCrashFix"></a>dropperCrashFix</h3><p><strong>1.16无此功能，因为1.16分支已经停止维护</strong></p>
+<p>修复了方块实体替换导致投掷器激活时崩服的bug</p>
+<p>详情请看<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1HM411z7jz/?spm_id_from=333.999.0.0">kygo_life的视频</a></p>
+<ul>
+<li>Default value: <code>false</code></li>
+<li>Acceptable value: <code>true</code> <code>false</code></li>
+<li>Categories: <code>BugFix</code></li>
 </ul>
 <h2 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h2><h3 id="player-xxx-tp"><a href="#player-xxx-tp" class="headerlink" title="player xxx tp"></a>player xxx tp</h3><ul>
 <li>tp到一个人，可以使用<code>commandTpToFakePlayer</code> <code>allowTpToRealPlayer</code>规则管理此指令</li>
@@ -369,7 +386,17 @@
 <li>tpmanager tp blacklist add xxx 将前缀xxx添加到tp黑名单</li>
 <li>tpmanager tphere whitelist add xxx 将前缀xxx添加到tphere白名单</li>
 <li>tpmanager tphere blacklist add xxx 将前缀xxx添加到tphere黑名单</li>
-<li>remove就是移除后缀，以此类推</li>
+<li>remove就是移除后缀，以此类推  <del>我都说这么细了，应该都能理解吧awa</del></li>
+</ul>
+<h3 id="crash"><a href="#crash" class="headerlink" title="crash"></a>crash</h3><ul>
+<li>顾名思义  <del>别问我有什么用，我猜在切完光照更新抑制刷怪塔之后这个命令应该有点用</del></li>
+<li>打完/crash之后需要再打/crash confirm才会崩服</li>
+</ul>
+<h2 id="Logger"><a href="#Logger" class="headerlink" title="Logger"></a>Logger</h2><h3 id="disk"><a href="#disk" class="headerlink" title="disk"></a>disk</h3><ul>
+<li>是HUD Logger，实时查看硬盘使用情况</li>
+</ul>
+<h3 id="updateSuppression"><a href="#updateSuppression" class="headerlink" title="updateSuppression"></a>updateSuppression</h3><ul>
+<li>记录每一次更新抑制</li>
 </ul>
 <h2 id="模组兼容性"><a href="#模组兼容性" class="headerlink" title="模组兼容性"></a>模组兼容性</h2><p>模组兼容性测试环境：</p>
 <ul>
