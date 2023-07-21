@@ -273,7 +273,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-05-01 09:16:31" itemprop="dateModified" datetime="2023-05-01T09:16:31+08:00">2023-05-01</time>
+                <time title="修改时间：2023-07-21 17:52:22" itemprop="dateModified" datetime="2023-07-21T17:52:22+08:00">2023-07-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -298,6 +298,7 @@
       
           <h1 id="Opt-Carpet-Addition-Mod"><a href="#Opt-Carpet-Addition-Mod" class="headerlink" title="Opt Carpet Addition Mod"></a>Opt Carpet Addition Mod</h1><p>Language: <a target="_blank" rel="noopener" href="https://github.com/OptiJava/OptCarpetAddition/blob/master/README-en.md">English</a> | 中文</p>
 <p>这是一个CarpetMod的扩展模组，目标是添加一些没有太大改变原版游戏机制但优化玩家体验/<del>降低腐竹血压</del>的一些功能。</p>
+<p>使用<a target="_blank" rel="noopener" href="https://github.com/ReplayMod/preprocessor">Preprocessor</a>构建<del>可供大家学习</del>，目前支持<code>1.17.1</code> <code>1.18.2</code> <code>1.19.3</code> <code>1.20.1</code>四个版本，其他的大部分大版本相同小版本不同的版本也可直接安装使用</p>
 <p><strong>本模组需要前置：<code>Carpet</code> <code>fabric-api</code></strong></p>
 <p><strong>使用前一定仔细阅读README.md！！！！</strong></p>
 <h2 id="Rules"><a href="#Rules" class="headerlink" title="Rules"></a>Rules</h2><h3 id="commandTpToFakePlayer"><a href="#commandTpToFakePlayer" class="headerlink" title="commandTpToFakePlayer"></a>commandTpToFakePlayer</h3><p>是否允许玩家通过/player xxx tp 指令传送到假人</p>
@@ -412,7 +413,7 @@
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>BugFix</code></li>
 </ul>
-<h3 id="unescapeChatMessage-仅v1-3-alpha-1及以上版本"><a href="#unescapeChatMessage-仅v1-3-alpha-1及以上版本" class="headerlink" title="unescapeChatMessage  仅v1.3-alpha.1及以上版本"></a>unescapeChatMessage  <code>仅v1.3-alpha.1及以上版本</code></h3><p><strong>此规则仅客户端有效，服务端无效</strong></p>
+<h3 id="unescapeChatMessage"><a href="#unescapeChatMessage" class="headerlink" title="unescapeChatMessage"></a>unescapeChatMessage</h3><p><strong>此规则仅客户端有效，服务端无效</strong></p>
 <p>此规则会把客户端发出的所有应当转义的文字转义</p>
 <p>例如在聊天栏输入：<code>你好，\u4e2d\u6587</code><br><br>实际发送的消息是：<code>你好，中文</code></p>
 <ul>
@@ -434,28 +435,32 @@
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Optimization</code> <code>Experimential</code></li>
 </ul>
-<h3 id="commandLogger"><a href="#commandLogger" class="headerlink" title="commandLogger"></a>commandLogger</h3><p><strong>1.16无此功能，因为1.16分支已经停止维护</strong></p>
-<p>这个规则可以记录每一个玩家执行的每一个指令</p>
+<h3 id="commandLogger"><a href="#commandLogger" class="headerlink" title="commandLogger"></a>commandLogger</h3><p>这个规则可以记录每一个玩家执行的每一个指令</p>
 <p>CommandLogger.json配置文件可以配置白名单、黑名单等，修改配置文件后应执行/commandlogger reload指令热重载</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Command</code> <code>Feature</code></li>
 </ul>
-<h3 id="dropperCrashFix"><a href="#dropperCrashFix" class="headerlink" title="dropperCrashFix"></a>dropperCrashFix</h3><p><strong>1.16无此功能，因为1.16分支已经停止维护</strong></p>
-<p>修复了方块实体替换导致投掷器激活时崩服的bug</p>
+<h3 id="dropperCrashFix"><a href="#dropperCrashFix" class="headerlink" title="dropperCrashFix"></a>dropperCrashFix</h3><p>修复了方块实体替换导致投掷器激活时崩服的bug</p>
 <p>详情请看<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1HM411z7jz/?spm_id_from=333.999.0.0">kygo_life的视频</a></p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>BugFix</code></li>
 </ul>
-<h3 id="optimizeFakePlayerSpawn"><a href="#optimizeFakePlayerSpawn" class="headerlink" title="optimizeFakePlayerSpawn"></a>optimizeFakePlayerSpawn</h3><p><strong>1.16无此功能，因为1.16分支已经停止维护</strong></p>
-<p>如果你的服务器连接mojang服务器的时间长，spawn假人的时候就会卡顿一会，此规则强制所有假人使用离线uuid，解决这一问题（但是也许引发新的问题</p>
+<h3 id="optimizeFakePlayerSpawn"><a href="#optimizeFakePlayerSpawn" class="headerlink" title="optimizeFakePlayerSpawn"></a>optimizeFakePlayerSpawn</h3><p>如果你的服务器连接mojang服务器的时间长，spawn假人的时候就会卡顿一会，此规则强制所有假人使用离线uuid，解决这一问题（但是也许引发新的问题</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Optimization</code></li>
+</ul>
+<h3 id="cceSuppressionCrashFix"><a href="#cceSuppressionCrashFix" class="headerlink" title="cceSuppressionCrashFix"></a>cceSuppressionCrashFix</h3><p>防止cce更新抑制器导致服务器崩溃，详情请看<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Hu4y1o71G/">Void0的视频</a></p>
+<p><strong>实验性规则</strong></p>
+<ul>
+<li>Default value: <code>false</code></li>
+<li>Acceptable value: <code>true</code> <code>false</code></li>
+<li>Categories: <code>BugFix</code> <code>Experimential</code></li>
 </ul>
 <h2 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h2><h3 id="player-xxx-tp"><a href="#player-xxx-tp" class="headerlink" title="player xxx tp"></a>player xxx tp</h3><ul>
 <li>tp到一个人，可以使用<code>commandTpToFakePlayer</code> <code>allowTpToRealPlayer</code>规则管理此指令</li>
@@ -480,8 +485,12 @@
 <h2 id="Logger"><a href="#Logger" class="headerlink" title="Logger"></a>Logger</h2><h3 id="disk"><a href="#disk" class="headerlink" title="disk"></a>disk</h3><ul>
 <li>是HUD Logger，实时查看硬盘使用情况</li>
 </ul>
-<h3 id="updateSuppression"><a href="#updateSuppression" class="headerlink" title="updateSuppression"></a>updateSuppression</h3><ul>
+<h3 id="updateSuppression"><a href="#updateSuppression" class="headerlink" title="updateSuppression"></a>updateSuppression</h3><p><strong>仅1.17和1.18</strong></p>
+<ul>
 <li>记录每一次更新抑制</li>
+</ul>
+<h3 id="cceSuppressionCrash"><a href="#cceSuppressionCrash" class="headerlink" title="cceSuppressionCrash"></a>cceSuppressionCrash</h3><ul>
+<li>CCE更新抑制器崩溃记录，类似于carpet的<code>updateSuppressedCrash</code></li>
 </ul>
 <h2 id="模组兼容性"><a href="#模组兼容性" class="headerlink" title="模组兼容性"></a>模组兼容性</h2><p>模组兼容性测试环境：</p>
 <ul>
