@@ -265,7 +265,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-09 18:51:05" itemprop="dateModified" datetime="2023-12-09T18:51:05+08:00">2023-12-09</time>
+                <time title="修改时间：2024-07-03 18:29:11" itemprop="dateModified" datetime="2024-07-03T18:29:11+08:00">2024-07-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -289,11 +289,46 @@
 
       
           <h1 id="Opt-Carpet-Addition-Mod"><a href="#Opt-Carpet-Addition-Mod" class="headerlink" title="Opt Carpet Addition Mod"></a>Opt Carpet Addition Mod</h1><p>Language: <a target="_blank" rel="noopener" href="https://github.com/OptiJava/OptCarpetAddition/blob/master/README-en.md">English</a> | 中文</p>
-<p>这是一个CarpetMod的扩展模组，目标是添加一些没有太大改变原版游戏机制但优化玩家体验/<del>降低腐竹血压</del>的一些功能。</p>
-<p>使用<a target="_blank" rel="noopener" href="https://github.com/ReplayMod/preprocessor">Preprocessor</a>构建<del>可供大家学习</del>，目前支持<code>1.17.1</code> <code>1.18.2</code> <code>1.19.3</code> <code>1.20.1</code>四个版本，其他的大部分大版本相同小版本不同的版本也可直接安装使用</p>
-<p><strong>本模组需要前置：<code>Carpet</code> <code>fabric-api</code></strong></p>
-<p><strong>使用前一定仔细阅读README.md！！！！</strong></p>
-<h2 id="Rules"><a href="#Rules" class="headerlink" title="Rules"></a>Rules</h2><h3 id="commandTpToFakePlayer"><a href="#commandTpToFakePlayer" class="headerlink" title="commandTpToFakePlayer"></a>commandTpToFakePlayer</h3><p>是否允许玩家通过/player xxx tp 指令传送到假人</p>
+<blockquote>
+<p>这是一个<code>Carpet</code>的扩展模组，目标是添加一些没有太大改变原版游戏机制但优化玩家体验<del>降低腐竹血压</del>的一些功能。</p>
+</blockquote>
+<p><strong><em>警告</em>: 不要下载以<code>-source</code>结尾的模组jar文件，那仅用于开发！！！</strong></p>
+<p>使用<a target="_blank" rel="noopener" href="https://github.com/ReplayMod/preprocessor">Preprocessor</a>构建<del>可供大家学习</del></p>
+<p><strong>本模组需要前置模组：<code>Carpet</code> <code>fabric-api</code></strong></p>
+<h2 id="各版本支持状态"><a href="#各版本支持状态" class="headerlink" title="各版本支持状态"></a>各版本支持状态</h2><p>其他与受支持的版本大版本相同小版本不同的MC版本，大多数可以直接安装正常工作，但是<strong>不能保证稳定性，请谨慎使用</strong></p>
+<table>
+<thead>
+<tr>
+<th>Minecraft 版本</th>
+<th>支持状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.20.4</td>
+<td>支持，积极开发</td>
+</tr>
+<tr>
+<td>1.20.1</td>
+<td>支持，积极开发</td>
+</tr>
+<tr>
+<td>1.19.3</td>
+<td>支持，积极开发</td>
+</tr>
+<tr>
+<td>1.18.2</td>
+<td>支持，积极开发</td>
+</tr>
+<tr>
+<td>1.17.1</td>
+<td>支持，积极开发</td>
+</tr>
+<tr>
+<td>1.16.5</td>
+<td>不支持，停止维护（在<code>2023/1/8</code>停止维护）</td>
+</tr>
+</tbody></table>
+<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><h3 id="commandTpToFakePlayer"><a href="#commandTpToFakePlayer" class="headerlink" title="commandTpToFakePlayer"></a>commandTpToFakePlayer</h3><p>是否允许玩家通过/player xxx tp 指令传送到假人</p>
 <ul>
 <li><p>有些服务器需要玩家之间互相tp的功能，如果使用tpa模组，就没法tp到假人（因为假人不会同意tpa），所以加入了这个功能</p>
 </li>
@@ -435,11 +470,25 @@
 <li>Categories: <code>Command</code> <code>Feature</code></li>
 </ul>
 <h3 id="dropperCrashFix"><a href="#dropperCrashFix" class="headerlink" title="dropperCrashFix"></a>dropperCrashFix</h3><p>修复了方块实体替换导致投掷器激活时崩服的bug</p>
-<p>详情请看<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1HM411z7jz/?spm_id_from=333.999.0.0">kygo_life的视频</a></p>
+<p>这个bug的发现人是玩家<code>kygo_life</code>，<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1HM411z7jz/?spm_id_from=333.999.0.0">他曾经在B站发了一个解释</a>，不过被删掉了。</p>
+<p>这个bug的触发流程大致如下：首先建造一个类似于物品分身的结构，只不过将箱子换成潜影盒（可为空），此时打开活板门，打掉潜影盒，此时更新抑制会被触发，然后在原本<br>潜影盒的位置上放置一个投掷器，然后用红石信号（如拉杆）触发此投掷器即可崩档。</p>
+<p>本bug在<code>1.17.1</code>经测试可用，其他版本未测试。</p>
+<p>大致原理：</p>
 <ul>
-<li>Default value: <code>false</code></li>
-<li>Acceptable value: <code>true</code> <code>false</code></li>
-<li>Categories: <code>BugFix</code></li>
+<li><p>有点像方块实体替换，潜影盒被打掉后因为触发了更新抑制，所以虽说潜影盒方块被打掉了，但是方块实体仍保留</p>
+</li>
+<li><p>投掷器方块被放置，方块是投掷器，方块实体仍为潜影盒</p>
+</li>
+<li><p>触发时，那个投掷器的<code>DropperBlock.dispense(...)</code>方法会被调用，而那个方法有这样一段代码：（这行代码在<code>yarn</code>1.17.1、1.18.2、1.19.3、1.20.1完全相同）</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DispenserBlockEntity dispenserBlockEntity = (DispenserBlockEntity)blockPointerImpl.getBlockEntity();</span><br><span class="line">                                                ^^^^^^^^^^</span><br><span class="line">                                               进行了一次强转</span><br></pre></td></tr></tbody></table></figure></li>
+<li><p>所以在强转时抛出<code>ClassCastException</code>，崩服甚至崩档（</p>
+</li>
+<li><p>Default value: <code>false</code></p>
+</li>
+<li><p>Acceptable value: <code>true</code> <code>false</code></p>
+</li>
+<li><p>Categories: <code>BugFix</code></p>
+</li>
 </ul>
 <h3 id="optimizeFakePlayerSpawn"><a href="#optimizeFakePlayerSpawn" class="headerlink" title="optimizeFakePlayerSpawn"></a>optimizeFakePlayerSpawn</h3><p>如果你的服务器连接mojang服务器的时间长，spawn假人的时候就会卡顿一会，此规则强制所有假人使用离线uuid，解决这一问题（但是也许引发新的问题</p>
 <ul>
@@ -454,13 +503,32 @@
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>BugFix</code> <code>Experimential</code></li>
 </ul>
+<h3 id="removeAllCurseOfBindingArmorWhenPlayerDeadInWall"><a href="#removeAllCurseOfBindingArmorWhenPlayerDeadInWall" class="headerlink" title="removeAllCurseOfBindingArmorWhenPlayerDeadInWall"></a>removeAllCurseOfBindingArmorWhenPlayerDeadInWall</h3><p>顾名思义，当玩家窒息死亡时移除所有绑定诅咒盔甲 <del>腐竹再也不用用指令移除绑定诅咒南瓜头了</del></p>
+<ul>
+<li>Default value: <code>false</code></li>
+<li>Acceptable value: <code>true</code> <code>false</code></li>
+<li>Categories: <code>Feature</code></li>
+</ul>
 <h3 id="customItemDiscardTime"><a href="#customItemDiscardTime" class="headerlink" title="customItemDiscardTime"></a>customItemDiscardTime</h3><p>自定义物品消失时间</p>
 <ul>
 <li>Default value: <code>false</code></li>
 <li>Acceptable value: <code>true</code> <code>false</code></li>
 <li>Categories: <code>Feature</code></li>
 </ul>
-<h2 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h2><h3 id="player-xxx-tp"><a href="#player-xxx-tp" class="headerlink" title="player xxx tp"></a>player xxx tp</h3><ul>
+<h3 id="allowBlockUpdateLogger"><a href="#allowBlockUpdateLogger" class="headerlink" title="allowBlockUpdateLogger"></a>allowBlockUpdateLogger</h3><p>由于<code>blockUpdate</code>记录器可能导致性能问题，所以增加了一个规则<code>allowBlockUpdateLogger</code>，如果此规则禁用，所有玩家不论是否订阅了本记录器都不会受到方块更新的通知，并且本规则默认禁用。<br><br>若无需使用<code>blockUpdate</code>，<strong>强烈建议禁用</strong></p>
+<ul>
+<li>Default value: <code>false</code></li>
+<li>Acceptable value: <code>true</code> <code>false</code></li>
+<li>Categories: <code>Feature</code> <code>Optimization</code></li>
+</ul>
+<h3 id="disallowRedstoneWireConnectsToOpenTrapdoor"><a href="#disallowRedstoneWireConnectsToOpenTrapdoor" class="headerlink" title="disallowRedstoneWireConnectsToOpenTrapdoor"></a>disallowRedstoneWireConnectsToOpenTrapdoor</h3><p><strong>仅限<code>1.20</code>版本及以上</strong></p>
+<p>如果你想在<code>1.20</code>使用音符盒极简抑制器，这可能能帮助你</p>
+<ul>
+<li>Default value: <code>false</code></li>
+<li>Acceptable value: <code>true</code> <code>false</code></li>
+<li>Categories: <code>Feature</code></li>
+</ul>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><h3 id="player-xxx-tp"><a href="#player-xxx-tp" class="headerlink" title="player xxx tp"></a>player xxx tp</h3><ul>
 <li>tp到一个人，可以使用<code>commandTpToFakePlayer</code> <code>allowTpToRealPlayer</code>规则管理此指令</li>
 </ul>
 <h3 id="player-xxx-tphere"><a href="#player-xxx-tphere" class="headerlink" title="player xxx tphere"></a>player xxx tphere</h3><ul>
@@ -480,7 +548,7 @@
 <li>顾名思义  <del>别问我有什么用，我猜在切完光照更新抑制刷怪塔之后这个命令应该有点用</del></li>
 <li>打完/crash之后需要再打/crash confirm才会崩服</li>
 </ul>
-<h2 id="Logger"><a href="#Logger" class="headerlink" title="Logger"></a>Logger</h2><h3 id="disk"><a href="#disk" class="headerlink" title="disk"></a>disk</h3><ul>
+<h2 id="记录器"><a href="#记录器" class="headerlink" title="记录器"></a>记录器</h2><h3 id="disk"><a href="#disk" class="headerlink" title="disk"></a>disk</h3><ul>
 <li>实时查看硬盘使用情况（HUD Logger，按Tab在玩家列表可查看）</li>
 </ul>
 <h3 id="updateSuppression"><a href="#updateSuppression" class="headerlink" title="updateSuppression"></a>updateSuppression</h3><p><strong>仅1.17和1.18</strong></p>
@@ -490,50 +558,10 @@
 <h3 id="cceSuppressionCrash"><a href="#cceSuppressionCrash" class="headerlink" title="cceSuppressionCrash"></a>cceSuppressionCrash</h3><ul>
 <li>CCE更新抑制器崩溃记录，类似于carpet的<code>updateSuppressedCrash</code></li>
 </ul>
-<h2 id="模组兼容性"><a href="#模组兼容性" class="headerlink" title="模组兼容性"></a>模组兼容性</h2><table>
-<thead>
-<tr>
-<th>模组</th>
-<th>模组版本</th>
-<th>兼容性</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>carpet</td>
-<td>1.4.57-3613865</td>
-<td>完全兼容</td>
-</tr>
-<tr>
-<td>c2me</td>
-<td>0.2.0+alpha.5.0</td>
-<td>部分兼容</td>
-</tr>
-<tr>
-<td>lithium</td>
-<td>0.7.5</td>
-<td>完全兼容</td>
-</tr>
-<tr>
-<td>Carpet-TIS-Addition</td>
-<td>1.43.0</td>
-<td>完全兼容</td>
-</tr>
-<tr>
-<td>plusls-carpet-addition</td>
-<td>0.2.5</td>
-<td>完全兼容</td>
-</tr>
-<tr>
-<td>sodium</td>
-<td>0.3.4</td>
-<td>完全兼容</td>
-</tr>
-<tr>
-<td>starlight</td>
-<td>1.0.0</td>
-<td>完全兼容</td>
-</tr>
-</tbody></table>
+<h3 id="blockUpdate"><a href="#blockUpdate" class="headerlink" title="blockUpdate"></a>blockUpdate</h3><p><strong>由于本记录器可能导致性能问题，所以增加了一个规则<code>allowBlockUpdateLogger</code>，如果此规则禁用，所有玩家不论是否订阅了本记录器都不会受到方块更新的通知，并且本规则默认禁用。</strong><br><br>若无需使用<code>blockUpdate</code>，<strong>强烈建议禁用<code>allowBlockUpdateLogger</code>规则</strong></p>
+<ul>
+<li>记录所有方块更新</li>
+</ul>
 
       
     </div>
